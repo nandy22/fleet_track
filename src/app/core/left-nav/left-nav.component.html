@@ -1,0 +1,46 @@
+<nav id="sidebar" class="position-relative">
+  <div class="vertical-height">
+  <div class="sidebar-header verticle-center-parent">
+    <h3 class="verticle-center-element">Fleet Track</h3>
+    <strong class="verticle-center-element">FT</strong>
+  </div>
+  <span id="sidebarCollapse" class="slidebar-icon slidebar-position">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </span>
+  <div class="nav-bar-container">
+    <ul class="nav-bar-container-ul">
+        <li class="nav-bar-container-item" *ngFor="let level1 of navData">
+          <div class="nav-list-dropdown" [ngClass]="[level1.isOpen ? 'level-active' : '']">
+            <span class="nav-main-icon" (click)="showContent(level1)"><i [ngClass]="['fa', level1.icon]" aria-hidden="true"></i></span>
+            <span class="nav-main-text">{{level1.text}}</span>
+            <i class="menu-toggle-icon" (click)="showContent(level1)" [ngClass]="[level1.isOpen ? 'fa fa-angle-down' : 'fa fa-angle-left']"></i>
+          </div>
+          <ul class="nav-bar-container-ul-level2" [hidden]="!level1.isOpen">
+            <li class="nav-bar-container-item-level2" *ngFor="let level2 of level1.children">
+              <a class="anchor-link" [routerLink]="level2.route">{{level2.text}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+
+  <!-- <ul class="list-unstyled components">
+    <li><a routerLink="/register/test">Test Component</a></li>
+    <li><a routerLink="/webstore/organization">Web store - organization</a></li>
+    <li><a routerLink="/webstore/user-mgmt">Web store - User Mgmt</a></li>
+    <li><a routerLink="/adminPannel/organization">Admin Pannel - organization</a></li>
+    <li><a routerLink="/adminPannel/user-mgmt">Admin Pannel - User Mgmt</a></li>
+  </ul> -->
+
+  <!-- <ul class="list-unstyled components">
+      <li *ngFor="let level1 of navData">
+        <a>{{item.text}}</a>
+        <ul class="collapse list-unstyled">
+          <li *ngFor="let level2 of level1.children">
+            <a [routerLink]="level2.route">{{level2.text}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul> -->
+</div>
+</nav>

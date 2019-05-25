@@ -1,0 +1,39 @@
+<aside>
+    <input type="checkbox" />
+    <ul materialize="collapsible" class='main-sidebar-tree collapsible'>
+        <li>
+            <a href='javascript:void(0);' class='collapsible-header'>
+                <em class="material-icons">person_pin</em>
+                <span class='main-sidebar-tree_Lable'>User Management <i class="fa fa-angle-right"></i></span>
+            </a>
+            
+            <ul class="cms-list collapsible-body">
+                <li><span [routerLink]="['dashboard/add-employee']"><i class="fa fa-arrows" aria-hidden="true"></i> Add Employee</span></li>
+                <li><span [routerLink]="['emp-list']"><i class="fa fa-arrows" aria-hidden="true"></i> Employee List</span></li>
+                <li><span [routerLink]="['emp-edit']"><i class="fa fa-arrows" aria-hidden="true"></i> Add / Edit Rolles</span></li>
+            </ul>
+        </li>
+        <li>
+            <a hrfe='javascript:void(0);' class='collapsible-header'>
+                <em class="material-icons">location_city</em>
+                <span class='main-sidebar-tree_Lable'>Organization <i class="fa fa-angle-right"></i></span>
+            </a>
+            
+            <ul class="cms-list collapsible-body">
+                <li><span><i class="fa fa-arrows" aria-hidden="true"></i> Add</span></li>
+                <li><span><i class="fa fa-arrows" aria-hidden="true"></i> List</span></li>
+                <li><span><i class="fa fa-arrows" aria-hidden="true"></i> List</span></li>
+            </ul>
+        </li>
+        <li>
+            <a hrfe='javascript:void(0);' class='collapsible-header'>
+                <em class="material-icons">person_pin</em>
+                <span class='main-sidebar-tree_Lable'>Dev Reference <i class="fa fa-angle-right"></i></span>
+            </a>
+            
+            <ul class="cms-list collapsible-body">
+                <li><span [routerLink]="['dev-ref']"><i class="fa fa-arrows" aria-hidden="true"></i> Dev Reference</span></li>
+            </ul>
+        </li>
+    </ul>
+</aside>

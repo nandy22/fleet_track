@@ -1,0 +1,7 @@
+<div>
+  <agm-map class="map-height" [latitude]="location.lat" [longitude]="location.lng" [fitBounds]="true">
+    <agm-marker *ngFor="let data of location.marker; let i = index" [latitude]="data.lat" [longitude]="data.lng"
+      [agmFitBounds]="true">
+    </agm-marker>
+  </agm-map>
+</div>

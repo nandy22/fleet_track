@@ -1,0 +1,361 @@
+@import './assets/scss/variables';
+@import url("../node_modules/primeng/resources/themes/omega/theme.css");
+@import url("../node_modules/primeng/resources/primeng.min.css");
+@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import './assets/scss/bootstrap.min.css';
+@import "~font-awesome/css/font-awesome.css";
+@import "~swiper/dist/css/swiper.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "~nouislider/distribute/nouislider.css";
+
+/*
+@font-face {
+  font-family: 'hindregular';
+  src: url('./assets/fonts/hind-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/hind-regular-webfont.woff') format('woff'),
+       url('./assets/fonts/Hind-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'hindbold';
+  src: url('./assets/fonts/hind-bold-webfont.woff2') format('woff2'),
+       url('./assets/fonts/hind-bold-webfont.woff') format('woff'),
+       url('./assets/fonts/Hind-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+
+/*
+Template Name: E-SHOP HTML E-Commerce Template
+Author: yaminncco
+
+Colors:
+	Body 		  : #4A4E5A
+	Headers 	: #30323A
+	Primary 	: #F8694A
+	Dark 		  :	#30323A
+	Grey 		  : #DADADA #F6F7F8
+
+Fonts: Hind
+
+Table OF Contents
+------------------------------------
+1 > GENERAL
+------ typography
+------ Buttons
+------ Inputs
+------ Lists
+------ Sections
+------ Breadcrumb
+2 > HEADER
+------ Top header
+------ Logo
+------ Search header
+------ Account header
+------ Cart header
+3 > NAVIGATION
+------ Category nav
+------ Menu nav
+------ Dropdowns
+------ Mobile Nav
+4 > BANNERS
+5 > HOME SLIDER
+6 > PRODUCT
+------ Single product
+------ Widget product
+------ Product slick
+7 > PRODUCTS PAGE
+------ Aside
+------ Store
+8 > PRODUCT DETAILS PAGE
+------ Product view
+------ Product details
+------ Product tab
+9 > CHECKOUT PAGE
+10 > FOOTER
+11 > SLICK
+------ Arrows
+------ Dots
+12 > RESPONSIVE
+------------------------------------*/
+
+/*=========================================================
+	01 -> GENERAL
+===========================================================*/
+
+/*----------------------------*\
+	Typography
+\*----------------------------*/
+
+body {
+  // font-family: 'Hind', sans-serif;
+  font-family: 'Exo', sans-serif;
+  color: #4A4E5A;
+  overflow-x: hidden;
+}
+html, body{
+  height: 100%;
+}
+
+.clearAfter:after {
+  content:"";
+  display:block;
+  clear:both;
+  visibility:hidden;
+  line-height:0;
+  height:0;
+}
+.font-size-16 {
+  font-size: 16px !important;
+}
+.viewport-height {
+  height: 100vh;
+}
+.flex-direction-row {
+  flex-direction: row;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #30323A;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+a {
+  color: #30323A;
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+
+a:hover, a:focus {
+  color: #F8694A;
+  text-decoration: none;
+  outline: none;
+}
+.main-header a {
+  color: #fff;
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+.main-header a:hover, .main-header a:focus {
+  color: #ccc;
+  text-decoration: none;
+  outline: none;
+}
+
+.primary-color {
+  color: #F8694A;
+}
+
+.white-color {
+  color: #FFF;
+}
+
+.font-weak {
+  font-weight: 400;
+}
+
+strong {
+  color: #30323A;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: #DADADA;
+}
+
+/*----------------------------*\
+	Buttons
+\*----------------------------*/
+
+.main-btn, .primary-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.icon-btn.main-btn, .icon-btn.primary-btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0px;
+  border: none;
+}
+
+.main-btn {
+  color: #30323A;
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 6px transparent;
+  box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 6px transparent;
+}
+
+.main-btn:hover, .main-btn:focus {
+  color: #F8694A;
+  -webkit-box-shadow: 0px 0px 0px 1px #F8694A inset, 0px 0px 0px 0px #F8694A;
+  box-shadow: 0px 0px 0px 1px #F8694A inset, 0px 0px 0px 0px #F8694A;
+}
+
+.primary-btn {
+  color: #FFF;
+  background-color: #F8694A;
+}
+
+.primary-btn:hover, .primary-btn:focus {
+  color: #FFF;
+  background-color: #30323A;
+}
+
+/*----------------------------*\
+	Inputs
+\*----------------------------*/
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0px 15px;
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 5px transparent;
+  box-shadow: 0px 0px 0px 1px #DADADA inset, 0px 0px 0px 5px transparent;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.input:focus {
+  -webkit-box-shadow: 0px 0px 0px 1px #F8694A inset, 0px 0px 0px 0px #F8694A;
+  box-shadow: 0px 0px 0px 1px #F8694A inset, 0px 0px 0px 0px #F8694A;
+}
+
+textarea.input {
+  padding: 15px;
+}
+
+.input-checkbox .caption {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s max-height;
+  transition: 0.3s max-height;
+}
+
+.input-checkbox>label {
+  color: #30323A;
+}
+
+.input-checkbox input[type="checkbox"]:checked+label+.caption, .input-checkbox input[type="radio"]:checked+label+.caption {
+  max-height: 800px;
+}
+
+// ------------------ GPS Style -------------------
+.wrapper {
+  background-color: #f1f5f8;
+}
+.vertical-height {
+  height: 100vh;
+}
+.position-relative {
+  position: relative;
+}
+.verticle-center-parent {
+  position: relative;
+}
+.verticle-center-element {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// -------------- home page ---------------
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.content {
+  width: 100%;
+  min-height: 100vh;
+}
+.content-fixed-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+}
+.app-footer {
+  height: 142px;
+}
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.3s;
+}
+// -------------------------------
+.app-main {
+  overflow-y: auto;
+}
+.app-body-height {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+// -------------- My Style ---------------
+/*
+.verticle-center-parent {
+  position: relative;
+}
+.verticle-center-element {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.wrapper-inner {
+  display: flex;
+  align-items: stretch;
+}
+.content {
+  width: 100%;
+  min-height: 100vh;
+}
+.content-fixed-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+}
+.app-footer {
+  height: 142px;
+}
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.app-main {
+  overflow-y: auto;
+}
+.app-body-height {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+*/
